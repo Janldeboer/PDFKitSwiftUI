@@ -1,6 +1,7 @@
 import SwiftUI
 import PDFKit
 
+@available(iOS 13.0, *)
 public struct SwiftUIPDFView: UIViewRepresentable {
     var url: URL
 
