@@ -3,20 +3,20 @@ import PDFKit
 
 @available(iOS 13.0, *)
 public struct SwiftUIPDFView: UIViewRepresentable {
-    var url: URL
+    var pdfDocument: PDFDocument
 
-    public init(url: URL) {
-        self.url = url
+    public init(pdfDocument: PDFDocument) {
+        self.pdfDocument = pdfDocument
     }
 
     public func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
-        pdfView.document = PDFDocument(url: url)
+        pdfView.document = pdfDocument
         return pdfView
     }
 
     public func updateUIView(_ pdfView: PDFView, context: Context) {
-        pdfView.document = PDFDocument(url: url)
+        pdfView.document = pdfDocument
     }
 }
 
