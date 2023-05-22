@@ -3,9 +3,9 @@ import PDFKit
 
 @available(iOS 13.0, *)
 public struct SwiftUIPDFThumbnailView: UIViewRepresentable {
-    @Binding var pdfDocument: PDFDocument?
+    @Binding var pdfDocument: PDFDocument
 
-    public init(pdfDocument: Binding<PDFDocument?>) {
+    public init(pdfDocument: Binding<PDFDocument>) {
         self._pdfDocument = pdfDocument
     }
 
